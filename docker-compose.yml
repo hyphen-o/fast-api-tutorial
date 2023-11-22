@@ -1,0 +1,9 @@
+version: '3'
+services:
+  demo-app:
+    build: ./app
+    volumes:
+      - ./app/.dockervenv:/works/.venv
+      - ./app:/works
+    ports:
+      - 8000:8000
